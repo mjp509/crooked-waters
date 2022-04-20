@@ -1,13 +1,28 @@
 //  ############## Load Modules START  ##############
+
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
 dotenv.config();
 var path = require("path");
+
 //  ############## Load Modules END  ##############
 
 //  ############## Prepare Middleware START  ##############
+
+// --- handlebars ---
+app.engine(
+	"hbs",
+	handlebars.engine({
+		extname: "hbs",
+		layoutsDir: __dirname + "/views/layouts/",
+		defaultLayout: "main",
+	})
+);
+app.set("view engine", "hbs");
+app.set("views", "./views");
 
 // --- favicon ---
 //app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
@@ -27,7 +42,7 @@ app.use(methodOverride("_method"));
 //  ############## Create Routes START  ##############
 
 // ------ HOME ------
-const homeRoute = require("./routes/home.route");
+const mainRoute = require("./routes/main.route");
 
 //  ############## Create Routes END  ##############
 
@@ -36,7 +51,7 @@ const homeRoute = require("./routes/home.route");
 // --------- use Routes ---------
 
 // ------ HOME ------
-app.use("/", homeRoute);
+app.use("/", mainRoute);
 
 // ############## Prepare Routes END ##############
 

@@ -1,0 +1,34 @@
+
+/* 
+* --feldgrau: #4b6858ff;
+* --navajo-white: #ffe0b5ff;
+* --liver-chestnut: #8a6552ff;
+* --pewter-blue: #91adc2ff;
+* --raisin-black: #161925ff;
+*/
+
+/* GENERIC */
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 76px;
+}
+
+/* HOME  */
+.home-panel {
+	left: 0;
+    right: 0;
+	position: absolute;
+	background-color: #161925ff;
+	min-height: 100vh;
+}
+
+/* SERVICES */
+
+/* ABOUT */
+
+/* CONTACT */
+
+/* HEADER */
+
+/* FOOTER */
