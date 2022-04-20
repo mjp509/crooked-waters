@@ -7,6 +7,13 @@
 * --raisin-black: #161925ff;
 */
 
+/* GENERIC */
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 76px;
+}
+
 /* HOME  */
 .home-panel {
 	left: 0;
