@@ -14,6 +14,11 @@ h1 {
 	font-size: 6vw;
 }
 
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 3vw;
+}
+
 .footer-contact-header {
 	font-family: 'Plus Jakarta Sans', sans-serif;
 }
