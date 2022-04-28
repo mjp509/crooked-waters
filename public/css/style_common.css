@@ -18,6 +18,11 @@ h2 {
 	font-family: 'Roboto', sans-serif;
 }
 
+#bg-image::after{
+	background-image: url("/public/images/dock.webp");
+	opacity: 0.75;
+}
+
 .footer-contact-header {
 	font-family: 'Plus Jakarta Sans', sans-serif;
 }
