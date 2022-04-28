@@ -14,6 +14,10 @@ h1 {
 	font-size: 6vw;
 }
 
+.footer-contact-header {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 /* HOME  */
 .home-panel {
 	left: 0;
