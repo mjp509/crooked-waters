@@ -18,9 +18,11 @@ h2 {
 	font-family: 'Roboto', sans-serif;
 }
 
-#bg-image::after{
-	background-image: url("/public/images/dock.webp");
-	opacity: 0.75;
+.home-image {
+}
+
+.top-bottom-image {
+	height: 33vh;
 }
 
 .footer-contact-header {
@@ -45,3 +47,11 @@ h2 {
 /* HEADER */
 
 /* FOOTER */
+
+@media (max-width: 480px) {
+	.top-bottom-image {
+	  height: 25vh;
+	}
+  }
+
+
