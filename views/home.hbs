@@ -13,9 +13,9 @@
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
-                <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                {{!-- <a class="navbar-brand mt-2 mt-lg-0" href="#">
                     <img src="/images/cw_logo-modified.webp" height="80" alt="CW Logo" loading="lazy" />
-                </a>
+                </a> --}}
                 <!-- Section: Social media -->
 
                 <!-- Section: Social media -->
@@ -54,12 +54,29 @@
             <h2 style="color: white" class="mb-2 text-center">Saskatoon & Surrounding Area</h2>
             <h2 style="color: white" class="mb-2 text-center">Custom Log Bed Frames & Woodworking</h2>
             <div class="d-flex justify-content-center">
-                <button type="button" class="btn-lg btn-light mx-2" data-mdb-ripple-color="dark" id="get-quote">Learn
-                    More</button>
-                <button type="button" class="btn-lg btn-light mx-2" id="learn-more">Get a Quote</button>
+                <button type="button" class="btn-lg btn-light mx-2" onClick="location.href = 'services'"><span
+                        class="text-uppercase">Learn
+                        More</span></button>
+                <button type="button" class="btn-lg btn-light mx-2" onClick="location.href = 'contact'"><span
+                        class="text-uppercase">Get a
+                        Quote</span></button>
             </div>
         </div>
     </div>
+    <!-- Contact Us Section -->
+    <div class="bg-image d-flex justify-content-center align-items-center text-white"
+        style="background-image: url('images/kingBed.webp'); height: 30vh;">
+        <div class="d-flex flex-column">
+            <h2 style="color: white" class="mb-2 text-center">Let's Work Together</h2>
+            <h3 style="color: white" class="mb-2 text-center">Contact Crooked Waters</h3>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn-lg btn-light" onClick="location.href = 'contact'"><span
+                        class="text-uppercase">Get in
+                        Touch</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us Section -->
 
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
@@ -67,7 +84,7 @@
             <!-- Section: Text -->
             <section class="mb-1">
                 <p class="footer-contact-header">
-                    Contact Crooked Waters Log Works
+                    Contact Crooked Waters
                 </p>
             </section>
             <section class="mb-4">
