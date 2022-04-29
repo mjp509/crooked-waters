@@ -164,10 +164,11 @@
             body: JSON.stringify(form)
         }).then((response) => {
             console.log("RESPONSE", response);
-            let finishForm = document.getElementById("contact_us_form");
-            finishForm.appendChild(createSuccess())
-            finishForm.submit();
-            finishForm.reset();
+            if (response.ok) {
+                let finishForm = document.getElementById("contact_us_form");
+                finishForm.submit();
+                finishForm.reset();
+            }
         }).catch((error) => {
             console.error(error);
         })
