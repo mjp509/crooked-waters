@@ -50,7 +50,10 @@ h2 {
 
 @media (max-width: 480px) {
 	.top-bottom-image {
-	  height: 25vh;
+	  height: 20vh;
+	}
+	h1 {
+		font-size: 36px;
 	}
   }
 
