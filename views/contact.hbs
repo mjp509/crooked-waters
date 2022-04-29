@@ -58,8 +58,63 @@
     <!--- Contact Us Text --->
 
     <!--- Contact Us Text --->
+    <div class="container mx-3" style="max-width: 700px;">
+
+    </div>
 
     <!--- Contact Us Form -->
+    <div class="container pt-3" style="max-width: 700px;">
+        <h2 class="text-center mb-3">Call, email or fill out the form below today for your free quote and to arrange a
+            meeting.</h2>
+        <div class="contact-us col-12">
+            <form id="contact_us_form">
+                <div id="contact_notification"></div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <label for="contact-firstname" class="mb-1">Firstname</label>
+                        <input name="contact-firstname" id="contact-firstname" class="form-control mb-2" type="text"
+                            placeholder="e.g. John" required="true" />
+                    </div>
+                    <div class="col-xl-6">
+                        <label for="contact-lastname" class="mb-1">Lastname</label>
+                        <input name="contact-lastname" id="contact-lastname" class="form-control mb-2" type="text"
+                            placeholder="e.g. Doe" required="true" />
+                    </div>
+                </div>
+
+                <label class="mb-1">Phone Number</label>
+                <div class="input-group mb-2">
+                    <input name="contact_phone" id="contact_phone" class="form-control mb-0" type="tel"
+                        placeholder="e.g. (111) 222 3333" required="true" />
+                </div>
+
+                <label class="mb-1">Email</label>
+                <div class="input-group mb-2">
+                    <input name="contact_email" id="contact_email" class="form-control" type="email"
+                        placeholder="e.g. johndoe@gmail.com" required="true" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact_question" class="mb-1">How can we help today?</label>
+                    <select class="form-control" name="contact_question" required="true">
+                        <option>General Inquiry</option>
+                        <option>Quote</option>
+                    </select>
+                </div>
+
+                <div>
+                    <textarea class="contact_notes form-control mb-2" type="text" maxlength="450" rows="6"
+                        name="contact_notes" placeholder="e.g. Leave us a message" required="true"></textarea>
+                </div>
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-dark" type="button" id="contact_submit_button">
+                        Submit<i class="fas fa-chevron-right ml-3" alt="chevron right"></i>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 
     <!--- Contact Us Form -->
 
@@ -96,4 +151,9 @@
 
 <script>
     console.log("Contact Us Page");
+
+    const sendEmail = () => {
+        console.log("Sending email...");
+    }
+
 </script>
