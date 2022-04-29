@@ -16,10 +16,9 @@ h1 {
 
 h2 {
 	font-family: 'Roboto', sans-serif;
+	font-size: 4vw;
 }
 
-.home-image {
-}
 
 .top-bottom-image {
 	height: 33vh;
@@ -54,6 +53,9 @@ h2 {
 	}
 	h1 {
 		font-size: 36px;
+	}
+	h2 {
+		font-size: 24px;
 	}
   }
 
