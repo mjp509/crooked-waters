@@ -1,14 +1,14 @@
 const nodemailer = require("nodemailer");
 const SibApiV3 = require("sib-api-v3-sdk");
 
-const sendEmail = (email, phone, name, subject, message) => {
+const sendEmail = (email, phone, firstname, lastname, subject, message) => {
 	return new Promise(async (resolve, reject) => {
 		if (!email && !name && !subject && !message) {
 			reject(false);
 		}
 
 		message =
-			`<b>Name:</b> ${name}\n<b>Number:</b> ${phone}\n\n<b>Message:</b>\n` +
+			`<b>Name:</b> ${firstname} ${lastname}\n<b>Number:</b> ${phone}\n\n<b>Message:</b>\n` +
 			message;
 		// auth and setup
 		let key = process.env.SIB_KEY;
@@ -25,7 +25,7 @@ const sendEmail = (email, phone, name, subject, message) => {
 			to: [
 				{
 					email: "mpetras14@gmail.com", //TODO: set to Trent's email
-					name: name,
+					name: `${firstname} ${lastname}`,
 				},
 			],
 			subject: subject,

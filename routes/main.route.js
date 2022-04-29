@@ -28,7 +28,8 @@ router.post("/email", (req, res) => {
 		.sendEmail(
 			req.body.email,
 			req.body.phone,
-			req.body.name,
+			req.body.firstname,
+			req.body.lastname,
 			req.body.subject,
 			req.body.message
 		)
