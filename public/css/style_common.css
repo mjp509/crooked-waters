@@ -17,7 +17,7 @@ h1 {
 
 h2 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 4vw;
+	font-size: 3vw;
 	text-shadow: 1px 1px black;
 }
 h3 {
@@ -57,7 +57,7 @@ h3 {
 
 /* FOOTER */
 
-@media (max-width: 375px) {
+@media (max-width: 426px) {
 	.top-bottom-image {
 	  height: 20vh;
 	}
