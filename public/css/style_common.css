@@ -33,6 +33,11 @@ h3 {
 	font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+.header-logo {
+	max-width: 28em;
+	height: auto;
+}
+
 /* HOME  */
 .home-panel {
 	left: 0;
@@ -61,6 +66,10 @@ h3 {
 	}
 	h2 {
 		font-size: 24px;
+	}
+	.header-logo {
+		max-width: 16em;
+		height: auto;
 	}
   }
 
