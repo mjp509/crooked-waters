@@ -17,6 +17,10 @@ router.get("/services", (req, res) => {
 	res.render("services", { title: "Services" });
 });
 
+router.get("/gallery", (req, res) => {
+	res.render("gallery", { title: "Gallery" });
+});
+
 router.get("/contact", (req, res) => {
 	//TODO: res.render contact
 	res.render("contact", { title: "Contact Us" });
