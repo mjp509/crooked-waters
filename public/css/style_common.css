@@ -87,6 +87,9 @@ hr {
 		max-width: 18em;
 		height: auto;
 	}
+	.services-content {
+		font-size: 12px;
+	}
   }
 
 
