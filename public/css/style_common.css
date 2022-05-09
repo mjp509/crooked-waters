@@ -34,6 +34,10 @@ hr {
 	height: 33vh;
 }
 
+.services-content {
+	font-size: 20px;
+}
+
 .service-wrapper {
 	margin-right: 10%;
 	margin-left: 10%;
