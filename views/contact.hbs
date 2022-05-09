@@ -67,6 +67,9 @@
 
     <!--- Contact Us Form -->
     <div class="container pt-3" style="max-width: 700px;">
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="success-alert" hidden>
+            Email has been delivered.
+        </div>
         <h3 class="text-center mb-3">Call, email, or fill out the form below today for your free quote or to arrange a
             meeting.</h3>
         <div class="contact-us col-12">
@@ -87,7 +90,7 @@
 
                 <label class="mb-1">Phone Number</label>
                 <div class="input-group mb-2">
-                    <input name="phone" id="phone" class="form-control mb-0" type="tel"
+                    <input name="phone" id="phone" class="form-control mb-0" type="tel" maxlength="10"
                         placeholder="e.g. (111) 222 3333" required="true" />
                 </div>
 
@@ -153,6 +156,7 @@
 </div>
 
 <script>
+
     const sendEmail = () => {
         console.log("Sending email...");
         let formEl = document.getElementById("contact_us_form");
@@ -169,8 +173,8 @@
             console.log("RESPONSE", response);
             if (response.ok) {
                 let finishForm = document.getElementById("contact_us_form");
-                finishForm.submit();
                 finishForm.reset();
+                document.getElementById("success-alert").removeAttribute("hidden");
             }
         }).catch((error) => {
             console.error(error);
@@ -190,7 +194,8 @@
 
     const initializeContactForm = () => {
         console.log("Content is loaded");
-        document.getElementById("contact_submit_button").addEventListener("click", () => {
+        document.getElementById("contact_submit_button").addEventListener("click", (event) => {
+            event.preventDefault();
             sendEmail();
         })
     }
