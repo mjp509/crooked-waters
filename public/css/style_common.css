@@ -24,9 +24,21 @@ h3 {
 	font-family: 'Roboto', sans-serif;
 }
 
+hr {
+	border: 7px solid;
+	border-radius: 5px;
+	width: 120px;
+}
 
 .top-bottom-image {
 	height: 33vh;
+}
+
+.service-wrapper {
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
 
 .footer-contact-header {
