@@ -38,6 +38,25 @@ hr {
 	font-size: 18px;
 }
 
+#about-us-wrapper {
+	font-size: 20px;
+}
+
+#about-us-signature {
+	font-family: 'Dancing Script', cursive;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+}
+
+.card, .testimonial-section {
+	color: white;
+	background: #262626;
+	font-size: 20px;
+}
+
+
+
 .service-wrapper {
 	margin-right: 10%;
 	margin-left: 10%;
@@ -83,12 +102,18 @@ hr {
 	h2 {
 		font-size: 24px;
 	}
+	.testimonial-section, h2 {
+		font-size: 16px;
+	}
 	.header-logo {
 		max-width: 18em;
 		height: auto;
 	}
 	.services-content {
 		font-size: 14px;
+	}
+	#about-us-wrapper {
+		font-size: 16px;
 	}
   }
 
