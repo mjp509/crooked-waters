@@ -24,7 +24,7 @@ const sendEmail = (email, phone, firstname, lastname, subject, message) => {
 			sender: { email: email },
 			to: [
 				{
-					email: "mpetras14@gmail.com", //TODO: set to Trent's email
+					email: "cwlogworks@gmail.com",
 					name: `${firstname} ${lastname}`,
 				},
 			],
