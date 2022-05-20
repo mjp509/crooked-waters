@@ -30,6 +30,8 @@ hr {
 	width: 120px;
 }
 
+
+
 .top-bottom-image {
 	height: 33vh;
 }
@@ -100,6 +102,10 @@ hr {
 	}
 	h2 {
 		font-size: 24px;
+	}
+	
+	#logo-home {
+		padding-bottom: 40%;
 	}
 
 	.text-center > h2 {
