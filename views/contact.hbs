@@ -13,9 +13,9 @@
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
-                {{!-- <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                    <img src="/images/cw_logo-modified.webp" height="80" alt="CW Logo" loading="lazy" />
-                </a> --}}
+                <a class="navbar-brand mt-2 mt-lg-0" href="/">
+                    <img src="/images/logo.webp" height="75" alt="CW Logo" loading="lazy" />
+                </a>
                 <!-- Section: Social media -->
 
                 <!-- Section: Social media -->
@@ -26,6 +26,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
@@ -49,8 +52,8 @@
     <!-- Navbar -->
 
     <!-- Header Image -->
-    <div class="bg-image  d-flex justify-content-center align-items-center text-white"
-        style="background-image: url('images/contactUs.webp');height: 30vh;">
+    <div class="bg-image  d-flex justify-content-center align-items-center text-white  top-bottom-image "
+        style="background-image: url('images/contactUs.webp');">
         <h1 class="text-uppercase">Contact Us</h1>
     </div>
     <!--- Header Image -->
@@ -58,8 +61,66 @@
     <!--- Contact Us Text --->
 
     <!--- Contact Us Text --->
+    <div class="container mx-3" style="max-width: 700px;">
+
+    </div>
 
     <!--- Contact Us Form -->
+    <div class="container pt-3" style="max-width: 700px;">
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="success-alert" hidden>
+            Email has been delivered.
+        </div>
+        <h3 class="text-center mb-3">Call, email, or fill out the form below today for your free quote or to arrange a
+            meeting.</h3>
+        <div class="contact-us col-12">
+            <form id="contact_us_form">
+                <div id="contact_notification"></div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <label for="firstname" class="mb-1">Firstname</label>
+                        <input name="firstname" id="firstname" class="form-control mb-2" type="text"
+                            placeholder="e.g. John" required="true" />
+                    </div>
+                    <div class="col-xl-6">
+                        <label for="lastname" class="mb-1">Lastname</label>
+                        <input name="lastname" id="lastname" class="form-control mb-2" type="text"
+                            placeholder="e.g. Doe" required="true" />
+                    </div>
+                </div>
+
+                <label class="mb-1">Phone Number</label>
+                <div class="input-group mb-2">
+                    <input name="phone" id="phone" class="form-control mb-0" type="tel" maxlength="10"
+                        placeholder="e.g. (111) 222 3333" required="true" />
+                </div>
+
+                <label class="mb-1">Email</label>
+                <div class="input-group mb-2">
+                    <input name="email" id="email" class="form-control" type="email"
+                        placeholder="e.g. johndoe@gmail.com" required="true" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="mb-1">How can we help today?</label>
+                    <select class="form-control" name="subject" required="true">
+                        <option>General Inquiry</option>
+                        <option>Quote</option>
+                    </select>
+                </div>
+
+                <div>
+                    <textarea class="message form-control mb-2" type="text" maxlength="450" rows="6" name="message"
+                        placeholder="e.g. Leave us a message" required="true"></textarea>
+                </div>
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-dark" type="button" id="contact_submit_button">
+                        Submit<i class="fas fa-chevron-right ml-3" alt="chevron right"></i>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 
     <!--- Contact Us Form -->
 
@@ -71,14 +132,14 @@
             <!-- Section: Text -->
             <section class="mb-1">
                 <p class="footer-contact-header">
-                    Contact CWLogworks
+                    Contact Crooked Waters
                 </p>
             </section>
             <section class="mb-4">
                 <p class="footer-contact">
-                    Phone: <a href="tel:13067133449">(306) 713 3449</a>
+                    Phone: <a href="tel:13062337201">(306) 233 7201</a>
                     <br>
-                    Email: cwlogworks@gmail.com
+                    Email: <a href="mailto:cwlogworks@gmail.com" target="_blank">cwlogworks@gmail.com</a>
                 </p>
             </section>
             <!-- Section: Text -->
@@ -87,13 +148,60 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-white" href="https://www.cwlogworks.ca/">cwlogworks.ca</a>
+            © 2022 Copyright:
+            <a class="text-white" href="https://www.cwlogworks.ca/">Crooked Waters Log Works. All Rights Reserved.</a>
         </div>
         <!-- Copyright -->
     </footer>
 </div>
 
 <script>
-    console.log("Contact Us Page");
+
+    const sendEmail = () => {
+        console.log("Sending email...");
+        let formEl = document.getElementById("contact_us_form");
+        let form = JSON.parse(formToJson(formEl));
+        console.log("FORM", form);
+
+        fetch("/email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(form)
+        }).then((response) => {
+            console.log("RESPONSE", response);
+            if (response.ok) {
+                let finishForm = document.getElementById("contact_us_form");
+                finishForm.reset();
+                document.getElementById("success-alert").removeAttribute("hidden");
+            }
+        }).catch((error) => {
+            console.error(error);
+        })
+
+    }
+
+    const formToJson = (formElement) => {
+        let formToJson_data = new FormData(formElement);
+        var formToJson_values = {};
+        formToJson_data.forEach(
+            (value, key) => (formToJson_values[key] = value)
+        );
+        return JSON.stringify(formToJson_values);
+
+    }
+
+    const initializeContactForm = () => {
+        console.log("Content is loaded");
+        document.getElementById("contact_submit_button").addEventListener("click", (event) => {
+            event.preventDefault();
+            sendEmail();
+        })
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        initializeContactForm();
+    })
+
 </script>

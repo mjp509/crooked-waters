@@ -12,15 +12,66 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 6vw;
+	text-shadow: 1px 1px black;
 }
 
 h2 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 3vw;
+	font-size: 2.5vw;
+	text-shadow: 1px 1px black;
+}
+h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+hr {
+	border: 7px solid;
+	border-radius: 5px;
+	width: 120px;
+}
+
+
+
+.top-bottom-image {
+	height: 33vh;
+}
+
+.services-content {
+	font-size: 18px;
+}
+
+#about-us-wrapper {
+	font-size: 20px;
+}
+
+#about-us-signature {
+	font-family: 'Dancing Script', cursive;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+}
+
+.card, .testimonial-section {
+	color: white;
+	background: #262626;
+}
+
+
+
+.service-wrapper {
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
 
 .footer-contact-header {
 	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.header-logo {
+	max-width: 24em;
+	height: auto;
 }
 
 /* HOME  */
@@ -28,7 +79,7 @@ h2 {
 	left: 0;
     right: 0;
 	position: absolute;
-	background-color: #161925ff;
+	background-color: #f8f8ff;
 	min-height: 100vh;
 }
 
@@ -41,3 +92,36 @@ h2 {
 /* HEADER */
 
 /* FOOTER */
+
+@media (max-width: 426px) {
+	.top-bottom-image {
+	  height: 20vh;
+	}
+	h1 {
+		font-size: 36px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	
+	#logo-home {
+		padding-bottom: 40%;
+	}
+
+	.text-center > h2 {
+		font-size: 18px;
+	}
+	.header-logo {
+		max-width: 18em;
+		height: auto;
+	}
+	.services-content {
+		font-size: 14px;
+	}
+	#about-us-wrapper {
+		font-size: 16px;
+	}
+  }
+
+
+

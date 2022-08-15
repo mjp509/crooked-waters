@@ -13,9 +13,9 @@
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
-                {{!-- <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                    <img src="/images/cw_logo-modified.webp" height="80" alt="CW Logo" loading="lazy" />
-                </a> --}}
+                <a class="navbar-brand mt-2 mt-lg-0" href="/">
+                    <img src="/images/logo.webp" height="75" alt="CW Logo" loading="lazy" />
+                </a>
                 <!-- Section: Social media -->
 
                 <!-- Section: Social media -->
@@ -26,6 +26,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/about">About</a>
@@ -48,26 +51,36 @@
     </nav>
     <!-- Navbar -->
     <!-- Header Image -->
-    <div class="bg-image d-flex justify-content-center align-items-center text-white"
-        style="background-image: url('images/contactUs.webp'); height: 30vh;">
+    <div class="bg-image d-flex top-bottom-image  justify-content-center align-items-center text-white"
+        style="background-image: url('images/aboutUs.webp'); ">
         <h1 class="text-uppercase">About Us</h1>
     </div>
     <!--- Header Image -->
 
-    <!-- Contact Us Section -->
-    <div class="bg-image d-flex justify-content-center align-items-center text-white"
-        style="background-image: url('images/kingBed.webp'); height: 30vh;">
-        <div class="d-flex flex-column">
-            <h2 style="color: white" class="mb-2 text-center">Let's Work Together</h2>
-            <h3 style="color: white" class="mb-2 text-center">Contact Crooked Waters</h3>
-            <div class="d-flex justify-content-center">
-                <button type="button" class="btn-lg btn-light" onClick="location.href = 'contact'"><span
-                        class="text-uppercase">Get in
-                        Touch</span></button>
+    <div class="service-wrapper">
+        <div class="row mb-2">
+            <div class="col-md-5">
+                <img src="/images/about.webp" class="img-fluid shadow-1-strong rounded" alt="Log Bunk Bed">
+            </div>
+            <div class="col-md-7">
+                <h3>About Crooked Waters Log Works</h3>
+                <hr>
+                <div id="about-us-wrapper">
+                    <p>It was always our dream to build a Log Home so back in 1999, that dream became a reality. We
+                        moved from Saskatoon to raise our family enjoying lake life at Wakaw Lake. </p>
+                    <p>Our passion grew into handcrafting Log Beds. Let us build your handcrafted log bed for
+                        generations to come.</p>
+                </div>
+                <div id="signature-wrapper" class="d-flex flex-column align-items-start mt-5">
+                    <p id="about-us-signature">Trent Osmak</p>
+                    <p id="about-us-signature">Owner & Operator</p>
+                    <p id="about-us-signature">Crooked Waters Log Works</p>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Contact Us Section -->
+
+
 
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
@@ -75,14 +88,14 @@
             <!-- Section: Text -->
             <section class="mb-1">
                 <p class="footer-contact-header">
-                    Contact CWLogworks
+                    Contact Crooked Waters
                 </p>
             </section>
             <section class="mb-4">
                 <p class="footer-contact">
-                    Phone: <a href="tel:13067133449">(306) 713 3449</a>
+                    Phone: <a href="tel:13062337201">(306) 233 7201</a>
                     <br>
-                    Email: cwlogworks@gmail.com
+                    Email: <a href="mailto:cwlogworks@gmail.com" target="_blank">cwlogworks@gmail.com</a>
                 </p>
             </section>
             <!-- Section: Text -->
@@ -91,12 +104,9 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-white" href="https://www.cwlogworks.ca/">cwlogworks.ca</a>
+            © 2022 Copyright:
+            <a class="text-white" href="https://www.cwlogworks.ca/">Crooked Waters Log Works. All Rights Reserved.</a>
         </div>
         <!-- Copyright -->
     </footer>
 </div>
-<script>
-    console.log("About Us Page");
-</script>
