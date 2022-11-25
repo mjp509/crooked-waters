@@ -40,6 +40,10 @@ hr {
 	font-size: 18px;
 }
 
+#christmas-sale {
+	background-image: url("../images/redChristmasBanner.jpeg");
+}
+
 #about-us-wrapper {
 	font-size: 20px;
 }
